@@ -8,68 +8,391 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- LESS основний файл -->
-    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 
 
 </head>
 <body>
-<div id="cart"></div>
-<div class="container">
-    <div class="row" id="pizza_list">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_1.jpg">
 
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
-                </div>
+<div class="menu">
+    <div class="discount ribbon">
+        <img src="assets/images/discount.svg">
+        <div class="ribb" style="text-align: center"> This week <div style=" border-bottom-style: dashed"> Discount </div> -20% </div>
+    </div>
+    <div class="pizza flex">
+        <div class="ribbon">
+            <div class="ribb" style="text-align: center"> Pizza <br>KMA</br> </div>
+            <img class="disc" src="assets/images/discount.svg"></div>
+        <div class="part flex">
+            <div class="contacts flex">
+                <div class="b1"> (044) 222 5 222</div>
+                <div class="b2"> 24/7</div>
+                <div class="b3"> Free shipping</div>
+            </div>
+            <div>
+                <button class="out" type="button"> Log out</button>
             </div>
         </div>
+    </div>
+    <div class="container">
 
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
-                </div>
+        <div class="panel">
+            <div class="all"> All variety
+                <div class="circle"> 9</div>
+            </div>
+            <div class="choice flex">
+                <a href="#" class="b2 btn btn-default">All</a>
+                <a href="#" class="b2 btn btn-default">Meat</a>
+                <a href="#" class="b2 btn btn-default">w/ Pineapple</a>
+                <a href="#" class="b2 btn btn-default">w/ Mushrooms</a>
+                <a href="#" class="b2 btn btn-default">w/ Seafood</a>
             </div>
         </div>
+        <div class="row" id="pizza_list">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_1.jpg">
 
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_3.jpg">
+                    <div class="caption"><h3>Mix</h3>
 
-                <div class="caption"><h3>Thumbnail label</h3>
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <div class="r flex">
 
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_2.jpg">
+
+                    <div class="caption"><h3>BBQ</h3>
+
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_3.jpg">
+
+                    <div class="caption"><h3>Margaritha</h3>
+
+                        <span>Vegan pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_4.jpg">
+
+                    <div class="caption"><h3>Rosso Gusto</h3>
+
+                        <span>Seafood pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info flex">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_5.jpg">
+
+                    <div class="caption"><h3>Chili</h3>
+
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_6.jpg">
+
+                    <div class="caption"><h3>Hunter's</h3>
+
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_7.jpg">
+
+                    <div class="caption"><h3>Imprezzo</h3>
+
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_8.jpg">
+
+                    <div class="caption"><h3>Dolce Mare</h3>
+
+                        <span>Seafood pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+
+                        <div class="r flex">
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail pizza-card">
+                    <img src="assets/images/pizza_9.jpg">
+
+                    <div class="caption"><h3>Carbonara</h3>
+
+                        <span>Meat pizza</span>
+                        <p>Це завдання такий кек повний, що я чуть не відлетіла з цієї планети, будь-ласка, я ще вам
+                            потрібна, не змушуйте мене вішатись</p>
+                        <div class="r flex">
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+
+                            <div class="info">
+                                <div class="align"><img src="assets/images/size-icon.svg"> 50</div>
+                                <div class="align"><img src="assets/images/weight.svg"> 600</div>
+                                <div class="align" style="font-size:25px; margin-bottom: 0px;"><b>169</b></div>
+                                <div class="align"> грн</div>
+                                <a href="#" class="btn">купити</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div id="cart">
+    <div class="orders">
+        <div class="kek flex">
+            <div class="ordersText"> Orders
+                <div class="circle"> 2</div>
+            </div>
+            <a href="#" class="b3 btn btn-default">Clear cart</a>
+        </div>
+    </div>
+    <div class="actually-orders flex">
+        <div class="information">
+            <h3> BBQ (Small) </h3>
+            <div class="flex">
+                <div class="align"> 50 <img src="assets/images/size-icon.svg"></div>
+                <div class="align"> 600 <img src="assets/images/weight.svg"></div>
+            </div>
+            <div class="flex">
+                <div class="price"> 139 grn</div>
+                <div class="flex" style="width: 70%; justify-content: space-around;">
+                    <button class="signs minus" type="button"> -</button>
+                    <div class="num"> 1</div>
+                    <button class="signs plus" type="button"> +</button>
+                    <a href="#" class="signs x btn btn-default">-</a>
+                </div>
+            </div>
+        </div>
+        <img class="for-orders" src="assets/images/pizza_2.jpg">
+    </div>
+    <div class="actually-orders flex">
+        <div class="information">
+            <h3> Imprezzo (Small) </h3>
+            <div class="flex">
+                <div class="align"> 50 <img src="assets/images/size-icon.svg"></div>
+                <div class="align"> 600 <img src="assets/images/weight.svg"></div>
+            </div>
+            <div class="flex">
+                <div class="price"> 139 grn</div>
+                <div class="flex" style="width: 70%; justify-content: space-around;">
+                    <button class="signs minus" type="button"> -</button>
+                    <div class="num"> 1</div>
+                    <button class="signs plus" type="button"> +</button>
+                    <a href="#" class="signs x btn btn-default">-</a>
+                </div>
+            </div>
+        </div>
+        <img class="for-orders" src="assets/images/pizza_7.jpg">
+    </div>
+</div>
+
 
 <!-- jQuery JavaScript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 <!--Bootsrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
