@@ -17,12 +17,18 @@ function showPizzaList(list) {
         var html_code = Templates.PizzaMenu_OneItem({pizza: pizza});
 
         var $node = $(html_code);
+        if(pizza.big_size)
 
-        $node.find(".buy-big").click(function(){
-            PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Big);
+        $node.find(".big").click(function () {
+            if (check(pizza,"big_size") === false) {
+                PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Big);
+            }
         });
-        $node.find(".buy-small").click(function(){
-            PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
+
+        $node.find(".small").click(function () {
+            if (check(pizza,"small_size") === false) {
+                PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
+            }
         });
 
         $pizza_list.append($node);
@@ -31,11 +37,22 @@ function showPizzaList(list) {
     list.forEach(showOnePizza);
 }
 
+function check(pizza,size){
+    var present = false;
+    for (var i = 0; i < PizzaCart.getPizzaInCart().length; i++) {
+        if (PizzaCart.checkSim(pizza, i, size)) {
+            present = true;
+            break;
+        }
+    }
+    return present;
+}
+
 function filterPizza(filter) {
     //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
 
-    Pizza_List.forEach(function(pizza){
+    Pizza_List.forEach(function (pizza) {
         //Якщо піка відповідає фільтру
         //pizza_shown.push(pizza);
 
@@ -46,9 +63,9 @@ function filterPizza(filter) {
     showPizzaList(pizza_shown);
 }
 
-function initialiseMenu() {
+function initialiseMenu(pl) {
     //Показуємо усі піци
-    showPizzaList(Pizza_List)
+    showPizzaList(pl)
 }
 
 exports.filterPizza = filterPizza;

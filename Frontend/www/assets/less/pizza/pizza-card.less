@@ -21,6 +21,7 @@ h3 {
   text-align: center;
 }
 
+
 .ribbon {
   display: flex;
   flex-direction: column;
@@ -133,6 +134,14 @@ h3 {
           font-size: 15px;
         }
       }
+    }
+
+    .label {
+      position: relative;
+      right: 0;
+      top: 0;
+      height: 12px;
+      z-index: 5;
     }
 
     .pizza-card {
@@ -281,6 +290,45 @@ h3 {
       font-weight: bold;
       color: @mainColor;
     }
+  }
+
+  .toOrder {
+    width: @panelWidth;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .c {
+      justify-content: space-around;
+
+      .sum {
+        display: block;
+        padding-top: 3px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .pr {
+        display: block;
+        font-size: 25px;
+        font-weight: bolder;
+
+      }
+    }
+  }
+
+  .zamovyty {
+    margin-left: 25px;
+    margin-right: 23px;
+    background: @mainColor;
+    border-color: transparent;
+    border-radius: 6px;
+    width: 80%;
+    height: 40px;
+    color: @textColor;
+    font-size: 20px;
   }
 }
 
