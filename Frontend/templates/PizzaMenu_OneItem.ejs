@@ -33,21 +33,21 @@ function getIngredientsArray(pizza) {
             <p> <%= getIngredientsArray(pizza).join(", ") %></p>
             <div class="r flex">
 
-                <% if(pizza.small_size) { %>
+                <% if(pizza.small) { %>
                     <div class="info">
-                        <div class="align"><img src="assets/images/size-icon.svg"> <%= pizza.small_size.size %></div>
-                        <div class="align"><img src="assets/images/weight.svg"> <%= pizza.small_size.weight %></div>
+                        <div class="align"><img src="assets/images/size-icon.svg"> <%= pizza.small.size %></div>
+                        <div class="align"><img src="assets/images/weight.svg"> <%= pizza.small.weight %></div>
                         <div class="align" style="font-size:25px; margin-bottom:0px;">
-                            <b><%= pizza.small_size.price %></b></div>
+                            <b><%= pizza.small.price %></b></div>
                         <div class="align"> грн</div>
                         <a href="#" class="small btn">купити</a>
                     </div>
                 <% } %>
-                <% if(pizza.big_size) { %>
+                <% if(pizza.big) { %>
                     <div class="info">
-                        <div class="align"><img src="assets/images/size-icon.svg"> <%= pizza.big_size.size %></div>
-                        <div class="align"><img src="assets/images/weight.svg"> <%= pizza.big_size.weight %></div>
-                        <div class="align" style="font-size:25px; margin-bottom:0px;"><b><%= pizza.big_size.price %></b>
+                        <div class="align"><img src="assets/images/size-icon.svg"> <%= pizza.big.size %></div>
+                        <div class="align"><img src="assets/images/weight.svg"> <%= pizza.big.weight %></div>
+                        <div class="align" style="font-size:25px; margin-bottom:0px;"><b><%= pizza.big.price %></b>
                         </div>
                         <div class="align"> грн</div>
                         <a href="#" class="big btn">купити</a>

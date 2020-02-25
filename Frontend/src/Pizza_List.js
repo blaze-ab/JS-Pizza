@@ -6,7 +6,7 @@ var pizza_info = [
     {
         id:1,
         icon:'assets/images/pizza_7.jpg',
-        title: "Імпреза",
+        title: "Imprezza",
         type: 'Meat',
         content: {
             meat: ['балик', 'салямі'],
@@ -15,12 +15,12 @@ var pizza_info = [
             pineapple: ['ананаси'],
             additional: ['томатна паста', 'петрушка']
         },
-        small_size:{
+        small:{
             weight: 370,
             size: 30,
             price: 99
         },
-        big_size:{
+        big:{
             weight: 660,
             size: 40,
             price: 169
@@ -41,12 +41,12 @@ var pizza_info = [
             mushroom: ['шампінйони'],
             additional: ['петрушка', 'оливки']
         },
-        small_size:{
+        small:{
             weight: 460,
             size: 30,
             price: 139
         },
-        big_size:{
+        big:{
             weight: 840,
             size: 40,
             price: 199
@@ -57,7 +57,7 @@ var pizza_info = [
     {
         id:3,
         icon:'assets/images/pizza_1.jpg',
-        title: "Міксовий поло",
+        title: "Polo Mix",
         type: 'Meat',
         content: {
             meat: ['вітчина', 'куриця копчена'],
@@ -65,12 +65,12 @@ var pizza_info = [
             pineapple: ['ананаси'],
             additional: ['кукурудза', 'петрушка', 'соус томатний']
         },
-        small_size:{
+        small:{
             weight: 430,
             size: 30,
             price: 115
         },
-        big_size:{
+        big:{
             weight: 780,
             size: 40,
             price: 179
@@ -80,7 +80,7 @@ var pizza_info = [
     {
         id:4,
         icon:'assets/images/pizza_5.jpg',
-        title: "Сициліано",
+        title: "Siciliana",
         type: 'Meat',
         content: {
             meat: ['вітчина', 'салямі'],
@@ -88,12 +88,12 @@ var pizza_info = [
             mushroom: ['шампінйони'],
             additional: ['перець болгарський',  'соус томатний']
         },
-        small_size:{
+        small:{
             weight: 450,
             size: 30,
             price: 111
         },
-        big_size:{
+        big:{
             weight: 790,
             size: 40,
             price: 169
@@ -103,14 +103,14 @@ var pizza_info = [
     {
         id:17,
         icon:'assets/images/pizza_3.jpg',
-        title: "Маргарита",
+        title: "Margaritha",
         type: 'Vegan',
         content: {
             cheese: ['сир моцарелла', 'сир домашній'],
             tomato: ['помідори'],
             additional: ['базилік', 'оливкова олія', 'соус томатний']
         },
-        small_size:{
+        small:{
             weight: 370,
             size: 30,
             price: 89
@@ -120,7 +120,7 @@ var pizza_info = [
     {
         id:43,
         icon:'assets/images/pizza_6.jpg',
-        title: "Мікс смаків",
+        title: "Tastes' mix",
         type: 'Meat',
         content: {
             meat: ['ковбаски'],
@@ -129,12 +129,12 @@ var pizza_info = [
             pineapple: ['ананаси'],
             additional: ['цибуля кримська', 'огірки квашені', 'соус гірчичний']
         },
-        small_size:{
+        small:{
             weight: 470,
             size: 30,
             price: 115
         },
-        big_size:{
+        big:{
             weight: 780,
             size: 40,
             price: 180
@@ -144,14 +144,14 @@ var pizza_info = [
     {
         id:90,
         icon:'assets/images/pizza_8.jpg',
-        title: "Дольче Маре",
+        title: "Dolce Mare",
         type: 'Seafood',
         content: {
             ocean: ['криветки тигрові', 'мідії', 'ікра червона', 'філе червоної риби'],
             cheese: ['сир моцарелла'],
-            additional: ['оливкова олія', 'вершки']
+            additional: [ 'вершки']
         },
-        big_size:{
+        big:{
             weight: 845,
             size: 40,
             price: 399
@@ -161,19 +161,19 @@ var pizza_info = [
     {
         id:6,
         icon:'assets/images/pizza_4.jpg',
-        title: "Россо Густо",
+        title: "Rosso Gusto",
         type: 'Seafood',
         content: {
             ocean: ['ікра червона', 'лосось копчений'],
             cheese: ['сир моцарелла'],
             additional: ['оливкова олія', 'вершки']
         },
-        small_size:{
+        small:{
             weight: 400,
             size: 30,
             price: 189
         },
-        big_size:{
+        big:{
             weight: 700,
             size: 40,
             price: 299

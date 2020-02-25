@@ -8,6 +8,8 @@ var Pizza_List = require('../Pizza_List');
 
 $(".all").click(function(){
     initialiseMenu();
+    $("#k").text(8);
+    $(".var").text($(".all").text());
 });
 $(".meat").click(function(){
     filterPizza("meat");
@@ -41,16 +43,16 @@ function showPizzaList(list) {
         var html_code = Templates.PizzaMenu_OneItem({pizza: pizza});
 
         var $node = $(html_code);
-        if (pizza.big_size)
+        if (pizza.big)
 
             $node.find(".big").click(function () {
-                if (check(pizza, "big_size") === false) {
+                if (check(pizza, "big") === false) {
                     PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Big);
                 }
             });
 
         $node.find(".small").click(function () {
-            if (check(pizza, "small_size") === false) {
+            if (check(pizza, "small") === false) {
                 PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
             }
         });
@@ -73,31 +75,25 @@ function check(pizza, size) {
 }
 
 function filterPizza(filter) {
-    //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
 
     var q = 0;
     Pizza_List.forEach(function (pizza) {
-        //Якщо піка відповідає фільтру
-        //pizza_shown.push(pizza);
         if (pizza.filters.findIndex(elem => elem === filter) != -1){
             pizza_shown.push(pizza);
             q+=1;
         }
 
 
-        $(".circle").text(q);
-        //TODO: зробити фільтри
+        $("#k").text(q);
     });
 
-    //Показати відфільтровані піци
     showPizzaList(pizza_shown);
 }
 
 function initialiseMenu() {
-    //Показуємо усі піци
     $(".var").text("All variety");
-    $("#circle").text(8);
+    $("#k").text(8);
     showPizzaList(Pizza_List)
 }
 

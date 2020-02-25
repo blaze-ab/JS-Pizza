@@ -3,23 +3,24 @@
  */
 var Templates = require('../Templates');
 
-//Перелік розмірів піци
+//pizza sizes
 var PizzaSize = {
-    Big: "big_size",
-    Small: "small_size"
+    Big: "big",
+    Small: "small"
 };
 
-//Змінна в якій зберігаються перелік піц в кошику
+//array of pizzas in cart
 var Cart = [];
 
-//HTML едемент куди будуть додаватися піци
 var $cart = $("#orders");
 
+//variables for tracking total number of orders and total price.
 var totalPrice = 0;
 var totalOrders = 0;
 
+//checks if given pizza is the same pizza from particular place in array(cart).
 function checkSim(pizza, i, size) {
-    if (pizza === Cart[i].pizza && size === Cart[i].size) {
+    if (pizza.id === Cart[i].pizza.id && size === Cart[i].size) {
         Cart[i].node.find(".plus").click();
         return true;
     } else {
@@ -44,7 +45,7 @@ function addToCart(pizza, size) {
 
 
     $(".pr").text(totalPrice + " grn");
-    $(".o").text(totalOrders);
+    $("#tOrders").text(totalOrders);
     //Оновити вміст кошика на сторінці
     updateCart(Cart[Cart.length - 1]);
     updateLocalStorage(totalOrders, totalPrice, JSON.stringify(Cart));
@@ -68,7 +69,7 @@ function initialiseCart() {
         Cart = JSON.parse(localStorage.getItem("cart"));
         totalOrders = parseInt(localStorage.getItem("totalOrders"), 10);
         $(".pr").text(totalPrice + " grn");
-        $(".o").text(totalOrders);
+        $("#tOrders").text(totalOrders);
     }
     $cart.html("");
     Cart.forEach(updateCart);
@@ -109,7 +110,7 @@ function updateCart(cart_item) {
         totalPrice += cart_item.priceDefault;
         cart_item.quantity += 1;
         cart_item.price += cart_item.priceDefault;
-        $(".o").text(totalOrders);
+        $("#tOrders").text(totalOrders);
         $(".pr").text(totalPrice + " grn");
         $node.find(".num").text(cart_item.quantity);
         $node.find(".price").text(cart_item.price + " grn");
@@ -122,7 +123,7 @@ function updateCart(cart_item) {
         cart_item.quantity -= 1;
         cart_item.price -= cart_item.priceDefault;
         $node.find(".num").text(cart_item.quantity);
-        $(".o").text(totalOrders);
+        $("#tOrders").text(totalOrders);
         $(".pr").text(totalPrice + " grn");
         $node.find(".price").text(cart_item.price + " grn");
         if (cart_item.quantity === 1) {
@@ -136,7 +137,7 @@ function updateCart(cart_item) {
     $node.find(".x").click(function () {
         totalOrders -= cart_item.quantity;
         totalPrice -= cart_item.priceDefault * cart_item.quantity;
-        $(".o").text(totalOrders);
+        $("#tOrders").text(totalOrders);
         $(".pr").text(totalPrice + " grn");
         $node.remove();
         removeFromCart(cart_item);
@@ -148,7 +149,7 @@ $('.b3').click(function () {
     Cart.splice(0, Cart.length);
     totalOrders = 0;
     totalPrice = 0;
-    $(".o").text(totalOrders);
+    $("#tOrders").text(totalOrders);
     $(".pr").text(totalPrice + " grn");
     $cart.html("");
     updateLocalStorage("0", "0", JSON.stringify(Cart));
